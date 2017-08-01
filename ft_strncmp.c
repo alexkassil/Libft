@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/04 17:14:55 by akassil           #+#    #+#             */
-/*   Updated: 2017/07/31 14:11:21 by akassil          ###   ########.fr       */
+/*   Created: 2017/07/03 17:39:59 by akassil           #+#    #+#             */
+/*   Updated: 2017/07/31 14:13:40 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int nb)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	char *result;
-
-	result = dest;
-	while (*dest)
-		dest++;
-	while (*src && nb != 0)
+	if (n <= 0)
+		return (0);
+	n--;
+	while (*s1 == *s2 && (*s1 != '\0') && (*s2 != '\0') && n != 0)
 	{
-		*dest++ = *src++;
-		nb--;
+		s1++;
+		s2++;
+		n--;
 	}
-	*dest = '\0';
-	return (result);
+	return (*s1 - *s2);
 }
