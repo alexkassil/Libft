@@ -6,19 +6,13 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 17:18:30 by akassil           #+#    #+#             */
-/*   Updated: 2017/07/31 14:12:39 by akassil          ###   ########.fr       */
+/*   Updated: 2017/08/02 01:13:38 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int				ft_strlen(char *str)
-{
-	int i;
+#include "libft.h"
 
-	i = 0;
-	while (*str++)
-		i++;
-	return (i);
-}
+int				ft_strlen(char *str);
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
