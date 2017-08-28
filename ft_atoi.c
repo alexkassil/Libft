@@ -5,40 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/31 12:06:50 by akassil           #+#    #+#             */
-/*   Updated: 2017/07/31 12:06:53 by akassil          ###   ########.fr       */
+/*   Created: 2017/06/29 17:56:53 by akassil           #+#    #+#             */
+/*   Updated: 2017/08/28 01:25:40 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*find_end(char *start)
+int		is_whitespace(char c)
 {
-	while (*start >= '0' && *start <= '9')
-		start++;
-	return (--start);
+	if (c == '\t' || c == '\n' || c == '\r' || c == '\v' || c == ' '
+		|| c == '\f')
+		return (1);
+	return (0);
 }
 
 int		ft_atoi(char *str)
 {
-	char	*end;
-	char	*start;
-	int		multiplier;
-	int		nb;
+	// Make result an unsigned long long, and if the result goes over long max,
+	// return -1 is negative, 0 if positive
+	long result;
+	int sign;
+	int i;
 
-	start = str;
-	while (*start > 0 && *start < 33)
-		start++;
-	if (*start == '-' || *start == '+')
-		start++;
-	end = find_end(start);
-	nb = 0;
-	multiplier = 1;
-	while (end >= start)
-	{
-		nb += (*end - '0') * multiplier;
-		multiplier *= 10;
-		end--;
-	}
-	if (start != str && *(start - 1) == '-')
-		nb *= -1;
-	return (nb);
+	i = 0;
+	result = 0;
+	sign = 1;
+	while (is_whitespace(str[i]))
+		i++;
+	if (str[i] == '-')
+		sign = -1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+		result = result * 10 + str[i++] - '0';
+	return (result * sign);
 }
