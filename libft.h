@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/31 12:05:18 by akassil           #+#    #+#             */
-/*   Updated: 2017/08/30 10:36:04 by akassil          ###   ########.fr       */
+/*   Updated: 2018/04/28 22:37:40 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,10 @@ int				ft_strcmp(char *s1, char *s2);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 void    		*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
+void			*ft_memcpy(void *dest, const void *src, size_t n);
+void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void			*ft_memmove(void *dest, const void *src, size_t n);
+void			*ft_memchr(const void *s, int c, size_t n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif

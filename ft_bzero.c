@@ -6,13 +6,13 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/30 10:29:21 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/28 18:35:45 by akassil          ###   ########.fr       */
+/*   Updated: 2018/04/28 18:42:49 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	while (n--)
 		*(char *)s++ = '\0';
