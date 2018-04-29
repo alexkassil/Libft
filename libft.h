@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/31 12:05:18 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/29 01:22:02 by akassil          ###   ########.fr       */
+/*   Updated: 2018/04/29 01:47:27 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,9 @@ char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(const char *haystack, const char *needle);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
-
+int				ft_isalpha(int c);
+int				ft_isdigit(int c);
+int				ft_isalnum(int c);
+int				ft_isascii(int c);
+int				ft_isprint(int c);
 #endif

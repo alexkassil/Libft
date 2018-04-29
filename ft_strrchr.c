@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/29 00:49:16 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/29 00:53:17 by akassil          ###   ########.fr       */
+/*   Updated: 2018/04/29 01:50:46 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,10 +19,10 @@ char *ft_strrchr(const char *s, int c)
 	while (1)
 	{
 		if (*s == (char)c)
-			r = s;
+			r = (char *)s;
 		if (!*s)
 			return (r);
-		*s++;
+		s++;
 	}
 
 	return (r);
