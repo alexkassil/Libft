@@ -1,17 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/29 01:42:13 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/29 13:48:39 by akassil          ###   ########.fr       */
+/*   Created: 2018/04/29 14:42:58 by akassil           #+#    #+#             */
+/*   Updated: 2018/04/29 14:43:23 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int ft_isprint(int c)
+#include "libft.h"
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if (32 <= c && c <= 127)
-		return (16384);
-	return (0);
+	char *r;
+	char *temp;
+	size_t i;
+
+	r = ft_strnew(ft_strlen(s));
+	temp = r;
+	i = 0;
+	if (r)
+		while (*s)
+			*r++ = f(i++, *s++);
+	return (temp);
 }

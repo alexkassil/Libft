@@ -1,17 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/29 01:42:13 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/29 13:48:39 by akassil          ###   ########.fr       */
+/*   Created: 2018/04/29 14:02:06 by akassil           #+#    #+#             */
+/*   Updated: 2018/04/29 14:09:15 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int ft_isprint(int c)
+#include "libft.h"
+#include <stdlib.h>
+
+void	*ft_memalloc(size_t size)
 {
-	if (32 <= c && c <= 127)
-		return (16384);
-	return (0);
+	void *r;
+	void *temp;
+
+	r = (malloc(size));
+	temp = r;
+	if (r)
+		while (size--)
+			*(char *)r++ = 0;
+	return (temp);
 }
