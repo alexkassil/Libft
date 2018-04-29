@@ -1,1 +1,0 @@
-alex@alex-ThinkPad-T470.23058:1524850756
