@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/30 13:51:44 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/29 00:58:41 by akassil          ###   ########.fr       */
+/*   Created: 2018/04/29 00:53:48 by akassil           #+#    #+#             */
+/*   Updated: 2018/04/29 01:18:21 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+int cmp(char *s1, const char *s2)
 {
-	char *r;
-
-	r = s;
-	while (*r != (char)c)
+	while (*s1)
 	{
-		if (!*r)
-			return (NULL);
-		*r++;
+		if (*s1 != *s2)
+			return 0;
+		s1++;
+		s2++;
 	}
+	return (1);
+}
 
-	return (r);
+char *ft_strstr(const char *haystack, const char *needle)
+{
+	while (1)
+	{
+		if (cmp(needle, haystack))
+			return (haystack);
+		if (!*haystack)
+			break;
+		haystack++;
+	}
+	return (NULL);
 }
