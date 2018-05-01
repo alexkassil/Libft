@@ -1,25 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/03 17:39:59 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/01 01:12:14 by akassil          ###   ########.fr       */
+/*   Created: 2018/04/30 23:56:01 by akassil           #+#    #+#             */
+/*   Updated: 2018/04/30 23:56:36 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (n <= 0)
-		return (0);
-	n--;
-	while (*s1 == *s2 && (*s1 != '\0') && (*s2 != '\0') && n != 0)
-	{
-		s1++;
-		s2++;
-		n--;
-	}
-	return (int)((unsigned char)*s1 - (unsigned char)*s2);
+	write(fd, &c, 1);
 }

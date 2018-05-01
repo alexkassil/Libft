@@ -6,7 +6,7 @@
 #    By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/31 12:00:20 by akassil           #+#    #+#              #
-#    Updated: 2018/04/30 23:24:09 by akassil          ###   ########.fr        #
+#    Updated: 2018/05/01 00:46:45 by akassil          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -22,7 +22,8 @@ SRCS= ft_atoi.c ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
       ft_strdel.c ft_strclr.c ft_striter.c ft_strmap.c ft_striteri.c \
       ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
       ft_strtrim.c ft_strsplit.c ft_itoa.c ft_putchar.c ft_putstr.c \
-      ft_putendl.c ft_putnbr.c
+      ft_putendl.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
+      ft_putnbr_fd.c
 OBJ = $(patsubst %.c, %.o, $(SRCS))
 
 all: $(NAME)
@@ -35,7 +36,7 @@ $(NAME):
 clean:
 	rm -f $(OBJ)
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
