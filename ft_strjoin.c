@@ -1,17 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/30 22:03:18 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/30 22:03:23 by akassil          ###   ########.fr       */
+/*   Created: 2018/04/30 22:03:56 by akassil           #+#    #+#             */
+/*   Updated: 2018/04/30 22:06:39 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	return (ft_memcpy(dest, src, n));
+	char *r;
+	char *temp;
+	size_t len;
+
+	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
+	r = ft_strnew(len);
+	temp = r;
+	if (r)
+		while (*s1)
+			*r++ = *s1++;
+	if (r)
+		while (*s2)
+			*r++ = *s2++;
+	return (temp);
 }

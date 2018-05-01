@@ -6,7 +6,7 @@
 #    By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/31 12:00:20 by akassil           #+#    #+#              #
-#    Updated: 2018/04/29 14:50:50 by akassil          ###   ########.fr        #
+#    Updated: 2018/04/30 23:24:09 by akassil          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -20,7 +20,9 @@ SRCS= ft_atoi.c ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
       ft_isdigit.c ft_isalpha.c ft_isalnum.c ft_isascii.c ft_isprint.c \
       ft_toupper.c ft_tolower.c ft_memalloc.c ft_memdel.c ft_strnew.c \
       ft_strdel.c ft_strclr.c ft_striter.c ft_strmap.c ft_striteri.c \
-      ft_strmapi.c ft_strequ.c ft_strnequ.c
+      ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
+      ft_strtrim.c ft_strsplit.c ft_itoa.c ft_putchar.c ft_putstr.c \
+      ft_putendl.c ft_putnbr.c
 OBJ = $(patsubst %.c, %.o, $(SRCS))
 
 all: $(NAME)

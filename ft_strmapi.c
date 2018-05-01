@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/29 14:42:58 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/29 14:44:38 by akassil          ###   ########.fr       */
+/*   Updated: 2018/04/30 21:57:24 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char *temp;
 	size_t i;
 
-	r = ft_strnew(ft_strlen(s));
+	r = ft_strnew(ft_strlen((char *)s));
 	temp = r;
 	i = 0;
 	if (r)

@@ -1,17 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/30 22:03:18 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/30 22:03:23 by akassil          ###   ########.fr       */
+/*   Created: 2018/04/30 23:25:23 by akassil           #+#    #+#             */
+/*   Updated: 2018/04/30 23:29:51 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_putnbr(int n)
 {
-	return (ft_memcpy(dest, src, n));
+	if (n == -2147483648)
+		ft_putstr("-2147483648");
+	else
+	{
+		if (n < 0)
+		{
+			ft_putchar('-');
+			n *= -1;
+		}
+		if (n > 10)
+			ft_putnbr(n / 10);
+		ft_putchar(n % 10 + '0');
+	}
 }
