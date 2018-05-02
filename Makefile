@@ -6,7 +6,7 @@
 #    By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/31 12:00:20 by akassil           #+#    #+#              #
-#    Updated: 2018/05/02 16:16:08 by akassil          ###   ########.fr        #
+#    Updated: 2018/05/02 16:28:07 by akassil          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -39,4 +39,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re: fclean $(NAME)
