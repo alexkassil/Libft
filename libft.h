@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/31 12:05:18 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/02 15:59:24 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 16:24:29 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,7 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 t_list				*ft_lstnew(void const *content, size_t content_size);
+void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+
 #endif
