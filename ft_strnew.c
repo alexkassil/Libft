@@ -6,9 +6,10 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/29 14:16:49 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/29 14:23:31 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 15:58:04 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strnew(size_t size)

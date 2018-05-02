@@ -6,12 +6,13 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/30 13:51:44 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/29 01:51:07 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 16:05:40 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	char *r;
 
@@ -22,6 +23,5 @@ char *ft_strchr(const char *s, int c)
 			return (NULL);
 		r++;
 	}
-
 	return (r);
 }

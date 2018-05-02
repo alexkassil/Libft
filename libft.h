@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/31 12:05:18 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/01 20:42:48 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 15:59:24 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 # include <string.h>
 
-typedef struct 		s_list
+typedef	struct		s_list
 {
 	void			*content;
 	size_t			content_size;
@@ -31,7 +31,7 @@ char				*ft_strncat(char *dest, char *src, int nb);
 unsigned int		ft_strlcat(char *dest, char *src, unsigned int size);
 int					ft_strcmp(char *s1, char *s2);
 int					ft_strncmp(char *s1, char *s2, unsigned int n);
-void    			*ft_memset(void *s, int c, size_t n);
+void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
@@ -41,7 +41,8 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
-char				*ft_strnstr(const char *big, const char *little, size_t len);
+char				*ft_strnstr(const char *big, const char *little, \
+size_t len);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
@@ -74,6 +75,5 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-t_list 				*ft_lstnew(void const *content, size_t content_size);
+t_list				*ft_lstnew(void const *content, size_t content_size);
 #endif
-

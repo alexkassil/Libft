@@ -6,9 +6,10 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/01 20:42:21 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/01 20:56:15 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 15:53:03 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 #include <stdlib.h>
 
@@ -32,4 +33,3 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	return (r);
 }
-

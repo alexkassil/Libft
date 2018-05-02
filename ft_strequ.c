@@ -6,9 +6,10 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/29 14:45:38 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/30 21:57:47 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 16:02:37 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_strequ(char const *s1, char const *s2)

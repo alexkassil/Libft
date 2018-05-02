@@ -6,14 +6,12 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 13:54:41 by akassil           #+#    #+#             */
-/*   Updated: 2017/08/28 00:33:24 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 15:55:30 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-
-int		ft_strlen(char *str);
 
 char	*ft_strdup(char *str)
 {

@@ -6,12 +6,13 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/01 00:04:46 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/01 00:07:21 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 16:01:01 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	while (n > 0 && *(unsigned char *)s1 == *(unsigned char *)s2)
 	{

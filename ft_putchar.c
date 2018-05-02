@@ -6,13 +6,13 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 23:17:18 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/30 23:21:48 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 15:59:34 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
