@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/29 17:56:53 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/28 18:28:38 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/01 21:50:08 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ int		is_whitespace(char c)
 
 int		ft_atoi(char *str)
 {
-	// Make result an unsigned long long, and if the result goes over long max,
-	// return -1 is negative, 0 if positive
-	long result;
+	long long result;
 	int sign;
 	int i;
 
@@ -36,6 +34,10 @@ int		ft_atoi(char *str)
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
 		result = result * 10 + str[i++] - '0';
+		if (result < 0)
+			return (sign == -1 ? 0 : -1);
+	}
 	return (result * sign);
 }
