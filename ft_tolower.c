@@ -6,10 +6,11 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/29 13:56:41 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/29 13:57:01 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 16:06:27 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int ft_tolower(int c)
+
+int	ft_tolower(int c)
 {
 	if ('A' <= c && c <= 'Z')
 		return (c - ('A' - 'a'));

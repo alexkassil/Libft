@@ -6,10 +6,11 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/29 01:29:01 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/29 02:02:12 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 16:03:26 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int ft_isalpha(int c)
+
+int	ft_isalpha(int c)
 {
 	if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
 		return (1024);

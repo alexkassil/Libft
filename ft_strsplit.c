@@ -6,9 +6,10 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 22:33:37 by akassil           #+#    #+#             */
-/*   Updated: 2018/04/30 23:16:56 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 15:49:30 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 #include <stdlib.h>
 
@@ -71,7 +72,8 @@ char	**ft_strsplit(char const *s, char c)
 		return (result);
 	while (words > word_number)
 	{
-		while (*s == c && *s++);
+		while (*s == c)
+			s++;
 		word = (char *)malloc(sizeof(char) * (length((char *)s, c) + 1));
 		while (!(*s == c) && *s)
 			word[i++] = *s++;

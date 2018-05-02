@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/28 19:44:21 by akassil           #+#    #+#             */
-/*   Updated: 2017/08/30 10:32:01 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 16:03:09 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	*ft_memset(void *s, int c, size_t n)
 	temp = s;
 	while (n--)
 		*(char *)temp++ = c;
-	return (s);	
+	return (s);
 }
