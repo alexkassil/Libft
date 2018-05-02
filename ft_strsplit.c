@@ -6,19 +6,19 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 22:33:37 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/02 15:49:30 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 16:13:41 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int		sep(char c)
+static	int		sep(char c)
 {
 	return ((c == ' ') || (c == '\t') || (c == '\n'));
 }
 
-int		length(char *str, char c)
+static	int		length(char *str, char c)
 {
 	int i;
 
@@ -31,7 +31,7 @@ int		length(char *str, char c)
 	return (i);
 }
 
-int		get_words(char *str, char c)
+static	int		get_words(char *str, char c)
 {
 	int i;
 	int chr;
@@ -56,7 +56,7 @@ int		get_words(char *str, char c)
 	return (i);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	int		words;
 	int		word_number;

@@ -6,7 +6,7 @@
 #    By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/31 12:00:20 by akassil           #+#    #+#              #
-#    Updated: 2018/05/01 20:49:04 by akassil          ###   ########.fr        #
+#    Updated: 2018/05/02 16:16:08 by akassil          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -40,8 +40,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-# UNIT TESTS RULE
-so:
-	$(CC) -fPIC $(SRCS) -c
-	$(CC) -shared -o libft.so $(OBJ)

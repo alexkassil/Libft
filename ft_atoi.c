@@ -6,11 +6,11 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/29 17:56:53 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/02 16:05:16 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 16:15:26 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		is_whitespace(char c)
+static	int		is_whitespace(char c)
 {
 	if (c == '\t' || c == '\n' || c == '\r' || c == '\v' || c == ' '
 		|| c == '\f')
@@ -18,7 +18,7 @@ int		is_whitespace(char c)
 	return (0);
 }
 
-int		ft_atoi(char *str)
+int				ft_atoi(char *str)
 {
 	long long	result;
 	int			sign;

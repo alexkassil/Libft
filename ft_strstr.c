@@ -6,13 +6,13 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/29 00:53:48 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/02 15:50:25 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 16:13:58 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		cmp(const char *s1, const char *s2)
+static	int		cmp(const char *s1, const char *s2)
 {
 	while (*s1)
 	{
@@ -24,7 +24,7 @@ int		cmp(const char *s1, const char *s2)
 	return (1);
 }
 
-char	*ft_strstr(const char *haystack, const char *needle)
+char			*ft_strstr(const char *haystack, const char *needle)
 {
 	while (1)
 	{
