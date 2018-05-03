@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/29 14:41:24 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/02 15:55:51 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 20:02:06 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t i;
 
 	i = 0;
-	while (*s)
-		f(i++, s++);
+	if (s && f)
+		while (*s)
+			f(i++, s++);
 }

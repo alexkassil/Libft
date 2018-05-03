@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 22:07:38 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/02 16:34:06 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 20:09:30 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char			*ft_strtrim(char const *s)
 	int		l;
 	char	*r;
 
+	if (!s)
+		return (NULL);
 	l = ft_strlen((char *)s);
 	while (is_ws(s[l - 1]))
 		l--;

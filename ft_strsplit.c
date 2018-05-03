@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 22:33:37 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/02 16:28:51 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 20:09:00 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ static	int		get_words(char *str, char c)
 
 	i = 0;
 	chr = 0;
+	if (!str)
+		return (0);
 	while (*str)
 	{
 		if ((*str) == c)
@@ -63,8 +65,8 @@ char			**ft_strsplit(char const *s, char c)
 	word_number = 0;
 	words = get_words((char *)s, c);
 	result = (char **)malloc(sizeof(char *) * (words + 1));
-	if (!result)
-		return (result);
+	if (!result || !s)
+		return (NULL);
 	while (words > word_number)
 	{
 		while (*s == c)
