@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/29 01:31:51 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/02 15:52:19 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 19:47:26 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (8);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
