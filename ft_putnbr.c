@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 23:25:23 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/02 15:47:03 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 19:29:27 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_putnbr(int n)
 			ft_putchar('-');
 			n *= -1;
 		}
-		if (n > 10)
+		if (n >= 10)
 			ft_putnbr(n / 10);
 		ft_putchar(n % 10 + '0');
 	}
