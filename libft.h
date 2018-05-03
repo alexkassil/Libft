@@ -6,7 +6,7 @@
 /*   By: akassil <akassil@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/31 12:05:18 by akassil           #+#    #+#             */
-/*   Updated: 2018/05/02 16:36:44 by akassil          ###   ########.fr       */
+/*   Updated: 2018/05/02 19:42:05 by akassil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-long				ft_atoi(char *str);
+int					ft_atoi(char *str);
 int					ft_strlen(char *str);
 char				*ft_strdup(char *str);
 char				*ft_strcpy(char *dest, char *src);
